@@ -1,13 +1,12 @@
 .hbk-results
 	position relative
 	display block
-	width (1000px / 2)
+	width (1004px / 2)
 	font-weight normal
-	background #1F2833
+	// background #1F2833
 	background linear-gradient(360deg, #1F2833 0%, #000000 100%)
 	overflow hidden
-	&:after,
-	&:before
+	&:after
 		position absolute
 		z-index 0
 		top 0
@@ -15,19 +14,30 @@
 		right 0
 		bottom 0
 		background url('../images/general/hbk-results-bg.png') 50% 0 / cover no-repeat
-		opacity 0.2
+		mix-blend-mode normal
+		// opacity: 0.1;
+		opacity 0.9
 		content ''
 	&_near
 		.hbk-results__title
 			font-size (80px / 2)
+	&_matches
+		.hbk-results__top
+			padding-top 15px
+		.hbk-results__title
+			padding-left 10px
+		.hbk-results__val
+			min-width 128px
+		.hbk-results__logo
+			bottom -13px
 	&__top
 		position relative
 		z-index 1
 		margin-right 0
 		margin-left 0
-		margin-bottom 10px
-		padding-top 16px
-		padding-left 10px
+		margin-bottom 17px
+		padding-top 7px
+		padding-left 8px
 		padding-right 10px
 		white-space nowrap
 		text-transform uppercase
@@ -38,7 +48,7 @@
 		font-size (70px / 2)
 		transform rotate(-6deg)
 	&__date
-		padding-right 36px
+		padding-right 41px
 		font-family $prEL
 		font-size (36px / 2 )
 		font-weight normal
@@ -47,7 +57,8 @@
 		transform rotate(-6deg)
 	&__list
 		position relative
-		margin-bottom 20px
+		// margin-bottom 20px
+		margin-bottom 0
 		padding-left 10px
 		padding-right 10px
 		text-align center
@@ -58,88 +69,98 @@
 		text-align center
 		font-size 0
 	&__team
-		margin-bottom 25px
+		margin-bottom 22px
 		position relative
 		display inline-block
 		vertical-align middle
 		width (310px / 2)
-		height (100px / 2)
+		height 48px
 		font-size (40px / 2)
 		color #FFF
 		transform rotate(-6deg)
 		&:first-child
 			.hbk-results__team-name
 				text-align right
+			.hbk-results__team-icon-w
+				box-shadow 10px 10px 15px 0 rgba(0,0,0,0.7), inset 5px 5px 15px 0 rgba(0,0,0,0.1)
+
 		&:last-child
+			margin-top -13px
+			// margin-right -8px
 			.hbk-results__team-icon-w
 				left auto
 				right -15px
+				box-shadow -10px 10px 15px rgba(0, 0, 0, 0.5), inset -5px 5px 15px rgba(0, 0, 0, 0.5)
 			.hbk-results__team-name
 				left 5px
 				right auto
 				text-align left
 	&__team-icon-w
 		position absolute
-		top -10px
-		left -15px
-		bottom -15px
-		// margin-top -5px
-		// margin-bottom -5px
-		// margin-left -15px
-		padding 4px
-		width ( 138px / 2 )
-		height ( 138px / 2 )
-		background linear-gradient(to top, #3e3d3d, #a4a4a4 26%, #525252 61%, #ffffff 74%, #b1b1b1)
-		box-shadow 10px 10px 15px 0 rgba(0, 0, 0, 0.5), inset 5px 5px 15px 0 rgba(0, 0, 0, 0.5)
-		border-radius 50%
-	&__team-icon
+		top -8px
+		left -14px
+		padding 3px
 		width 62px
 		height 62px
-		padding 2px
-		background -10px 10px 15px rgba(0, 0, 0, 0.5), inset -5px 5px 15px rgba(0, 0, 0, 0.5)
+		background linear-gradient(to top, #3e3d3d, #a4a4a4 26%, #525252 61%, #ffffff 74%, #b1b1b1)
+		box-shadow 10px 10px 15px 0 rgba(0, 0, 0, 0.5)
+		border-radius 50%
+	&__team-icon
+		width 56px
+		height 56px
+		padding 1px
+		// background -10px 10px 15px rgba(0, 0, 0, 0.5), inset -5px 5px 15px rgba(0, 0, 0, 0.5)
 		border-radius 50%
 		overflow hidden
 		transform rotate(6deg)
+		box-shadow inset -5px 5px 15px rgba(0, 0, 0, 0.5)
 		img
 			@extends .image
 			border-radius 50%
 	&__team-name
 		position absolute
 		top 5px
-		right 5px
+		right 8px
 		max-width 90px
 		white-space normal
 		font-family $prER
 		font-size (40px / 2)
 		line-height 1
 	&__val
-		padding-left 20px
-		padding-right 20px
+		margin-top -28px
+		padding-left 10px
+		// padding-right 10px
+		padding-right 10px
+		min-width 111px
 		display inline-block
 		vertical-align middle
 		font-family $prEB
 		font-size (80px / 2)
+		line-height 1
 		color #FFF
 		transform rotate(-6deg)
 	&__bottom
 		position relative
-		min-height (90px / 2)
-		background url('../images/general/bottom-third.png') 100% 100% / 500px  no-repeat
+		z-index 1
+		min-height 46px
+		background url('../images/general/bottom-third.png') 100% 100% / 448px  no-repeat
 		color #FFF
 	&__social
 		position absolute
 		top 8px
-		left 120px
+		left 122px
 		font-size (30px / 2)
 		font-family $prER
 		font-weight normal
 		color #FFF
 		text-decoration none
+		text-shadow 0px 1px 2px rgba(0, 0, 0, 0.847175)
+		letter-spacing tracking(25)
 		transform rotate(-6deg)
 
 	&__logo
 		position absolute
-		bottom 0
-		right 0
+		bottom -17px
+		right 2px
 		retinaSprite($hbk_logo_second_group)
 		hide-text()

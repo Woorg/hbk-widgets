@@ -1,0 +1,10 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/hbk-matches/hbk-matches
+
+block head
+	- var pageTitle = 'News widget';
+
+block content
+	.page__in
+		+hbk-matches()

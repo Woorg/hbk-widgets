@@ -1,0 +1,13 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/hbk-results/hbk-results
+
+block head
+	- var pageTitle = 'Results widget';
+
+block content
+	.page__in
+		.page__row
+			+hbk-near()
+		.page__row
+			+hbk-results()

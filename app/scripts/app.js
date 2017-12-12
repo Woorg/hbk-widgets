@@ -33,7 +33,7 @@ import $ from 'jquery';
 				widgetStilization.prependTo(".widget_wrap");
 			}
 
-		pageWidget(['hbk-player', 'hbk-news', 'hbk-results', 'hbk-matches']);
+		pageWidget(['index', 'hbk-news', 'hbk-results']);
 
 	});
 

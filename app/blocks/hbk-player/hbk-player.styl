@@ -1,2 +1,117 @@
 .hbk-player
-	display block
+	position relative
+	width (1000px / 2)
+	overflow hidden
+	&__logo
+		position absolute
+		top 0
+		left 0
+		retinaSprite($hbk_logo_third_group)
+		hide-text
+	&__image
+		min-height (756px / 2)
+		img
+			@extends .image
+	&__body
+		position relative
+		z-index 1
+		margin-top -(168px / 2)
+		margin-left -16px
+		margin-right -16px
+		padding-top 30px
+		padding-left 30px
+		padding-right 30px
+		transform rotate(-3deg)
+	&__name
+		position relative
+		margin-left -30px
+		margin-right -30px
+		padding-left 40px
+		font-family $prER
+		font-size (70px / 2)
+		color #FFF
+		background #0C0A65
+		transform rotate(-3deg)
+		overflow hidden
+		&:before
+			position absolute
+			z-index 1
+			top 0
+			left 0
+			right 0
+			bottom 0
+			height (205px / 2)
+			// background url('../images/content/player-team.png') 0 0 no-repeat
+			background url('../images/content/player-name-bg.png') calc(100% - 20px) 0 /  250px no-repeat
+			transform rotate(0deg)
+			content ""
+			opacity 0.3
+
+
+	&__name-last
+		font-family $prEB
+		text-transform uppercase
+	&__scores
+		margin-left -24px
+		// margin-right -26px
+		font-size 0
+		background #000
+		white-space nowrap
+		transform rotate(-3deg)
+	&__scores-item
+		margin-right 6px
+		width 25%
+		display inline-block
+		vertical-align top
+		&:last-child
+			margin-right 0
+	&__scores-body
+		background #fff
+		// min-height (128px / 2)
+		height 70px
+		font-family $postr
+		font-weight normal
+		font-size (154px / 2)
+		text-align center
+		color #000
+	&__scores-val
+		position relative
+		top -(70px / 2)
+	&__scores-bottom
+		position relative
+		padding-top 5px
+		min-height (80px / 2)
+		background #000
+		font-family $prEL
+		font-size (40px / 2)
+		text-transform uppercase
+		color #FFF
+		text-align center
+		&:after,
+		&:before
+			position absolute
+			content ""
+			top 0
+			width 2px
+			height 100%
+			background #FFF
+		&:after
+			right -3px
+		&:before
+			left -3px
+	&__bottom
+		position relative
+		margin-top -27px
+		min-height 52px
+		background url('../images/general/bottom.png') 100% 100% / 500px  no-repeat
+
+	&__social
+		position absolute
+		bottom 5px
+		right 5px
+		font-family $prESem
+		font-size (30px / 2)
+		text-align right
+		color #FFF
+		text-decoration none
+		text-shadow 0 1px 2px rgba(0, 0, 0, 0.847175)
